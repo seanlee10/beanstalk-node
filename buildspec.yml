@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: node12
+  post_build:
+    commands:
+      # - mvn package
+      # - mv target/my-web-app.war my-web-app.war
+      - echo "hello test"
+artifacts:
+  files:
+    - app.js
+    - package.json
+    - .ebextensions/**/*
